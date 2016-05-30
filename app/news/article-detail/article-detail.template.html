@@ -1,0 +1,22 @@
+<div class="content container">
+    <a ng-href="{{ vm.getBackLink() }}">
+        < Back
+    </a>
+    <div ng-switch="vm.loading">
+        <div ng-switch-when="true">
+            <h1>Loading</h1>
+            <p>Requesting article data...</p>
+        </div>
+        <div ng-switch-default>
+            <h1>{{ vm.article.data.title }}</h1>
+            <p class="text-muted">
+                Published {{ vm.article.data.pubDate |date:'dd/MM/yyyy' }} via
+                <a ng-href="#/news/source/{{ vm.article.sourceID }}">
+                    {{ vm.article.sourceName }}
+                </a>
+            </p>
+            <h2>Summary</h2>
+            <p>{{ vm.article.data.description }}</p>
+        </div>
+    </div>
+</div>

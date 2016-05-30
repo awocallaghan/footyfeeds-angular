@@ -1,0 +1,19 @@
+{
+  "name": "footyfeeds",
+  "description": "Football news aggregator",
+  "version": "4.0.0",
+  "homepage": "http://footyfeeds.net",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.5",
+    "angular-route": "~1.5.5",
+    "angular-loader": "~1.5.5",
+    "angular-mocks": "~1.5.5",
+    "html5-boilerplate": "~5.2.0",
+    "ng-dialog": "^0.6.1",
+    "angular-local-storage": "^0.2.7"
+  },
+  "resolutions": {
+    "angular": "1.5.5"
+  }
+}

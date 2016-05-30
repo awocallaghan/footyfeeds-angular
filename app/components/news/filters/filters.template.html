@@ -1,0 +1,19 @@
+<div id="filters">
+    <div class="container">
+        <div class="col-sm-12 col-md-8">
+            <label>Active Team:</label>
+            <span>{{ vm.currentTeam.teamName }}</span>
+            <button class="btn btn-secondary" ng-click="vm.changeTeam()">
+                Change team
+            </button>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <button class="btn btn-secondary"
+                    ng-click="vm.changeSources()"
+                    ng-disabled="!vm.hasSelectedTeam()"
+            >
+                Filter sources
+            </button>
+        </div>
+    </div>
+</div>

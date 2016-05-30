@@ -1,0 +1,30 @@
+<div class="pos-f t">
+    <nav class="navbar navbar-static-top">
+        <div class="container">
+            <button class="navbar-toggler hidden-sm-up" type="button" ng-click="vm.collapse()">
+                &#9776;
+            </button>
+            <a class="navbar-brand" ng-href="{{ vm.getHomeLink() }}">FootyFeeds</a>
+            <div id="nav" ng-class="{ 'collapse': vm.collapsed }">
+                <ul class="nav navbar-nav col-xs-12 col-md-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ vm.getHomeLink() }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/about">About</a>
+                    </li>
+                </ul>
+                <div class="pull-md-right col-xs-12 col-md-4" ng-switch="vm.isLoggedIn()">
+                    <div ng-switch-when="true">
+                        <a class="btn btn-secondary" href="#/account">Account</a>
+                        <a class="btn btn-secondary" href="#/logout">Logout</a>
+                    </div>
+                    <div ng-switch-when="false">
+                        <a class="btn btn-secondary" href="#/login">Login</a>
+                        <a class="btn btn-secondary" href="#/register">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

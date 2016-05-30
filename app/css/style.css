@@ -1,0 +1,117 @@
+/*
+  Colour variables
+*/
+/*
+  Responsive breakpoints
+*/
+/*
+  Sticky footer/general
+*/
+html {
+  position: relative;
+  min-height: 100%;
+  overflow: auto; }
+
+body {
+  min-height: 100%;
+  margin-bottom: 60px;
+  background-color: #E6E6E6; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #525252;
+  color: #FFF; }
+
+footer span a:link,
+footer span a:visited {
+  font-weight: bold;
+  color: #E6E6E6; }
+
+footer span a:hover,
+footer span a:active {
+  color: #cdcdcd;
+  text-decoration: none; }
+
+.content {
+  margin: 1em auto 1em auto;
+  padding: 1em;
+  background-color: #FFF; }
+
+form .alert {
+  margin-top: 0.5em; }
+
+/*
+  Header
+*/
+nav {
+  background-color: #2C5F7A; }
+
+.navbar {
+  border-radius: 0; }
+
+nav .navbar-brand:link,
+nav .navbar-brand:visited {
+  color: #E6E6E6; }
+
+nav .navbar-brand:hover,
+nav .navbar-brand:active {
+  color: white; }
+
+nav .nav-link:link,
+nav .nav-link:visited {
+  color: #E6E6E6; }
+
+nav .nav-link:hover,
+nav .nav-link:active {
+  color: #60a2c6; }
+
+.navbar-toggler {
+  color: #E6E6E6; }
+
+@media (min-width: 34em) {
+  #nav.collapse {
+    display: block !important; } }
+/*
+  News filters
+*/
+#filters {
+  min-height: 60px;
+  line-height: 60px;
+  background-color: #525252;
+  color: #E6E6E6;
+  margin: 0 auto 1em auto; }
+
+/*
+  News articles
+*/
+.article img {
+  max-width: 100%; }
+
+/*
+  Pick team dialog
+*/
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  width: 80%; }
+
+#pick-team-dialog #leagues {
+  margin: 1em auto 1em auto; }
+
+#pick-team-dialog #teams {
+  margin: 1em auto 1em auto; }
+
+#pick-team-dialog #teams ul {
+  max-height: 240px;
+  overflow: auto;
+  list-style: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2; }
+
+#pick-team-dialog #teams li {
+  padding: 5px; }
+
+/*# sourceMappingURL=style.css.map */

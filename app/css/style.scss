@@ -1,0 +1,137 @@
+/*
+  Colour variables
+*/
+$primary: #2C5F7A;
+$light: #E6E6E6;
+$dark: #525252;
+
+/*
+  Responsive breakpoints
+*/
+$small: 34em;
+$medium: 48em;
+$large: 62em;
+$x-large: 75em;
+
+/*
+  Sticky footer/general
+*/
+html {
+  position: relative;
+  min-height: 100%;
+  overflow: auto;
+}
+body {
+  min-height: 100%;
+  margin-bottom: 60px;
+  background-color: $light;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: $dark;
+  color: #FFF;
+}
+footer span a:link,
+footer span a:visited
+{
+  font-weight: bold;
+  color: $light;
+}
+footer span a:hover,
+footer span a:active
+{
+  color: darken($light, 10%);
+  text-decoration: none;
+}
+.content {
+  margin: 1em auto 1em auto;
+  padding: 1em;
+  background-color: #FFF;
+}
+form .alert {
+  margin-top: 0.5em;
+}
+
+/*
+  Header
+*/
+nav {
+  background-color: $primary;
+}
+.navbar {
+  border-radius: 0;
+}
+nav .navbar-brand:link,
+nav .navbar-brand:visited
+{
+  color: $light;
+}
+nav .navbar-brand:hover,
+nav .navbar-brand:active
+{
+  color: lighten($primary, 70%);
+}
+nav .nav-link:link,
+nav .nav-link:visited
+{
+  color: $light;
+}
+nav .nav-link:hover,
+nav .nav-link:active
+{
+  color: lighten($primary, 25%);
+}
+.navbar-toggler {
+  color: $light;
+}
+@media (min-width: $small) {
+  #nav.collapse {
+    display: block !important;
+  }
+}
+
+/*
+  News filters
+*/
+#filters {
+  min-height: 60px;
+  line-height: 60px;
+  background-color: $dark;
+  color: $light;
+  margin: 0 auto 1em auto;
+}
+
+/*
+  News articles
+*/
+.article img {
+  max-width: 100%;
+}
+
+/*
+  Pick team dialog
+*/
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  width: 80%;
+}
+#pick-team-dialog #leagues {
+  margin: 1em auto 1em auto;
+}
+#pick-team-dialog #teams {
+  margin: 1em auto 1em auto;
+}
+#pick-team-dialog #teams ul {
+  max-height: 240px;
+  overflow: auto;
+  list-style: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+#pick-team-dialog #teams li {
+  padding: 5px;
+}

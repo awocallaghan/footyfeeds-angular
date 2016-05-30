@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="footyfeeds" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="footyfeeds" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="footyfeeds" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="footyfeeds" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FootyFeeds</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.min.css">
+  <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+ </head>
+<body>
+  <header></header>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view></div>
+
+  <site-footer></site-footer>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+  <script src="app.js"></script>
+  <script src="services/services.module.js"></script>
+  <script src="services/user.service.js"></script>
+  <script src="services/filters.service.js"></script>
+  <script src="services/news.service.js"></script>
+  <script src="services/teams.service.js"></script>
+  <script src="services/sources.service.js"></script>
+  <script src="directives/directives.module.js"></script>
+  <script src="directives/keepScroll.directive.js"></script>
+  <script src="about/about.module.js"></script>
+  <script src="users/users.module.js"></script>
+  <script src="users/register/register.module.js"></script>
+  <script src="users/register/register.controller.js"></script>
+  <script src="users/login/login.module.js"></script>
+  <script src="users/login/login.controller.js"></script>
+  <script src="users/account/account.module.js"></script>
+  <script src="users/account/account.controller.js"></script>
+  <script src="users/logout/logout.module.js"></script>
+  <script src="users/logout/logout.controller.js"></script>
+  <script src="news/news.module.js"></script>
+  <script src="news/news.controller.js"></script>
+  <script src="news/article-detail/article-detail.module.js"></script>
+  <script src="news/article-detail/article-detail.controller.js"></script>
+  <script src="teams/teams.module.js"></script>
+  <script src="sources/sources.module.js"></script>
+  <script src="sources/source-detail/source-detail.module.js"></script>
+  <script src="sources/source-detail/source-detail.controller.js"></script>
+  <script src="components/error/error.module.js"></script>
+  <script src="components/news/filters/filters.module.js"></script>
+  <script src="components/news/filters/filters.controller.js"></script>
+  <script src="components/news/filters/filters.directive.js"></script>
+  <script src="components/news/viewer/viewer.module.js"></script>
+  <script src="components/news/viewer/viewer.controller.js"></script>
+  <script src="components/news/viewer/viewer.directive.js"></script>
+  <script src="components/news/article/article.module.js"></script>
+  <script src="components/news/article/article.directive.js"></script>
+  <script src="components/news/article/shorten.filter.js"></script>
+  <script src="components/teams/pick/pick.module.js"></script>
+  <script src="components/teams/pick/pick.controller.js"></script>
+  <script src="components/sources/pick/pick.module.js"></script>
+  <script src="components/sources/pick/pick.controller.js"></script>
+  <script src="components/layout/layout.module.js"></script>
+  <script src="components/layout/header/header.module.js"></script>
+  <script src="components/layout/header/header.directive.js"></script>
+  <script src="components/layout/header/header.controller.js"></script>
+  <script src="components/layout/footer/footer.module.js"></script>
+  <script src="components/layout/footer/footer.controller.js"></script>
+  <script src="components/layout/footer/footer.directive.js"></script>
+</body>
+</html>

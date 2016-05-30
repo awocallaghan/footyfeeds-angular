@@ -1,0 +1,26 @@
+<div class="article card">
+    <div class="card-block">
+        <h4 class="card-title">
+            {{ article.data.title }}
+        </h4>
+        <h6 class="card-subtitle text-muted">
+            {{ article.data.pubDate | date:'dd/MM/yyyy' }} via
+            {{ article.sourceName }}
+        </h6>
+    </div>
+    <img ng-hide="article.imageURL == null"
+         ng-src="{{ article.imageURL }}"
+         alt="{{ article.data.title }}"
+    />
+    <div class="card-block">
+        <p class="card-text">
+            {{ article.data.description |shorten:300}}
+        </p>
+        <a class="btn btn-secondary" ng-href="{{ article.articleURL }}" target="_blank">
+            Read full article
+        </a>
+        <a class="btn btn-secondary" ng-href="#/news/article/{{ article.articleID }}">
+            More info
+        </a>
+    </div>
+</div>

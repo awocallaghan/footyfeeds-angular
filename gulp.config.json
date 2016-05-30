@@ -1,0 +1,30 @@
+{
+  "build": "./app",
+  "buildJS": "./app/js",
+  "buildCSS": "./app/css",
+  "vendorjs": [
+    "./app/bower_components/angular/angular.js",
+    "./app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js",
+    "./app/bower_components/angular-route/angular-route.js",
+    "./app/bower_components/angular-local-storage/dist/angular-local-storage.min.js",
+    "./app/bower_components/ng-dialog/js/ngDialog.min.js"
+  ],
+  "vendorcss": [
+    "./app/bower_components/html5-boilerplate/dist/css/normalize.css",
+    "./app/bower_components/html5-boilerplate/dist/css/main.css",
+    "./app/css/bootstrap.min.css",
+    "./app/bower_components/ng-dialog/css/ngDialog.min.css",
+    "./app/bower_components/ng-dialog/css/ngDialog-theme-default.min.css"
+  ],
+  "css": [
+    "./app/css/style.css"
+  ],
+  "js": [
+    "./app/app.js",
+    "./app/**/*.module.js",
+    "./app/**/*.service.js",
+    "./app/**/*.controller.js",
+    "./app/**/*.directive.js",
+    "./app/**/*.filter.js"
+  ]
+}

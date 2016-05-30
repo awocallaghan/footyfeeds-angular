@@ -1,0 +1,14 @@
+<div class="content container">
+    <div ng-switch="vm.loading">
+        <div ng-switch-when="true">
+            <h1>Loading</h1>
+            <p>Loading source data...</p>
+        </div>
+        <div ng-switch-when="false">
+            <h1>{{ vm.source.sourceName }}</h1>
+            <p>
+                RSS URL: {{ vm.source.url }}
+            </p>
+        </div>
+    </div>
+</div>

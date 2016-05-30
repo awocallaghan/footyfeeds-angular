@@ -1,0 +1,52 @@
+<div id="pick-team-dialog">
+    <h1>Pick a team</h1>
+    <div ng-switch="vm.loading">
+        <p ng-switch-when="true">
+            Loading...
+        </p>
+        <div ng-switch-when="false">
+            <p>
+                Select your favourite team from the English Premier League or Championship to view all the latest football news headlines relating to your club.
+            </p>
+            <p>
+                Click
+                <a ng-click="confirm(null)">
+                    here
+                </a>
+                to reset the selected team.
+            </p>
+            <div id="leagues" class="row">
+                <div ng-repeat="league in vm.leagues"
+                     class="col-sm-12 col-md-6">
+                    <a class="btn"
+                       ng-class="{ 'btn-primary': vm.selectedLeague == league, 'btn-secondary': vm.selectedLeague != league }"
+                       ng-click="vm.selectLeague(league)">
+                        {{ league.leagueName }}
+                    </a>
+                </div>
+            </div>
+            <div ng-show="vm.selectedLeague != null" id="teams" class="row">
+                <ul>
+                    <li ng-repeat="team in vm.teams">
+                        <a class="btn"
+                           ng-class="{ 'btn-primary': vm.selectedTeam == team, 'btn-secondary': vm.selectedTeam != team }"
+                           ng-click="vm.selectTeam(team)">
+                            {{ team.teamName }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button ng-disabled="vm.selectedTeam == null"
+            ng-click="confirm(vm.selectedTeam)"
+            class="btn btn-primary"
+    >
+        Update
+    </button>
+    <button ng-click="closeThisDialog()"
+            class="btn btn-warning"
+    >
+        Cancel
+    </button>
+</div>

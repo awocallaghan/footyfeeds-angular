@@ -1,0 +1,35 @@
+<div id="pick-sources-dialog">
+    <h1>
+        Manage sources
+        <small class="text-muted">for {{ vm.team.teamName }}</small>
+    </h1>
+    <div ng-switch="vm.loading">
+        <p ng-switch-when="true">
+            Loading...
+        </p>
+        <div ng-switch-when="false">
+            <p>Currently viewing {{ vm.activeStats() }} active sources.</p>
+            <p>
+                <a ng-click="vm.toggleAll(true)">
+                    Enable all
+                </a>
+                &nbsp;/&nbsp;
+                <a ng-click="vm.toggleAll(false)">
+                    Disable all
+                </a>
+            </p>
+            <ul>
+                <li ng-repeat="source in vm.sources">
+                    <input type="checkbox" ng-model="source.enabled" />
+                    <label>{{ source.sourceName }}</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="btn btn-primary" ng-click="confirm(vm.sources)">
+        Update
+    </button>
+    <button class="btn btn-warning" ng-click="closeThisDialog()">
+        Cancel
+    </button>
+</div>

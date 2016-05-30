@@ -1,0 +1,26 @@
+<div class="content container">
+    <div ng-show="vm.error"
+         class="alert alert-danger"
+    >
+        <strong>Error loading news!</strong>
+        No articles received
+        <a ng-click="vm.refresh(true)">
+            Retry
+        </a>
+    </div>
+    <div ng-if="vm.articles.length == 0" class="alert alert-warning">
+        <strong>No articles found!</strong>
+        Try adjusting the set filters
+    </div>
+    <article ng-repeat="article in vm.articles" article="article"></article>
+    <div ng-switch="vm.loading">
+        <div ng-switch-when="true" class="text-xs-center">
+            <span>Loading news...</span>
+        </div>
+        <div ng-switch-when="false" class="text-xs-center">
+            <button class="btn btn-primary" ng-disabled="!vm.morePages" ng-click="vm.nextPage($event)" type="button">
+                Load more
+            </button>
+        </div>
+    </div>
+</div>

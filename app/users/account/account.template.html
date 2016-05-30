@@ -1,0 +1,32 @@
+<div class="content container">
+    <h2>
+        Account info
+        <small class="text-muted">
+            Logged in as {{ vm.activeUser.username }}
+        </small>
+    </h2>
+    <div ng-switch="vm.teams.length">
+        <div ng-switch-when="0">
+            <p>No saved preferences</p>
+        </div>
+        <div ng-switch-default>
+            <div ng-repeat="team in vm.teams"
+                 class="card"
+            >
+                <div class="card-block">
+                    <h4 class="card-title">
+                        {{ vm.activeUser.userSources[team].team.teamName }}
+                    </h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li ng-repeat="source in vm.activeUser.userSources[team].sources"
+                        class="list-group-item"
+                        ng-class="{'list-group-item-success':source.enabled, 'list-group-item-danger':!source.enabled }"
+                    >
+                        {{ source.sourceName }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
